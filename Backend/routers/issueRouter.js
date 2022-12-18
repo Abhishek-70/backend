@@ -2,7 +2,7 @@
 
 const express = require('express');
 const router = express.Router();
-const Model = require('../models/userModel');
+const Model = require('../models/issueModel');
 // route or end point
 router.post('/add', (req,res) => {
     console.log(req.body);

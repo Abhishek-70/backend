@@ -43,6 +43,11 @@ const Header = () => {
                     Register
                   </NavLink>
                 </li>
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/addissue">
+                    Open New Issue
+                  </NavLink>
+                </li>
               </ul>
               {/* Icons */}
               <ul className="navbar-nav d-flex flex-row me-1">

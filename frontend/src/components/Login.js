@@ -1,38 +1,41 @@
 import { Formik } from "formik"
 import React from "react"
-import { TextField } from "@mui/material"
+import { useNavigate } from "react-router-dom"
 import Swal from "sweetalert2"
 
 const Login = () => {
+
+  const navigate = useNavigate();
+
   const userSubmit = async (formdata) => {
-    console.log(formdata);
+    console.log(formdata)
 
     const res = await fetch("http://localhost:5000/user/authenticate", {
       method: "POST",
       body: JSON.stringify(formdata),
       headers: { "Content-Type": "application/json" },
-    });
+    })
 
-    if(res.status === 200){
+    if (res.status === 200) {
       Swal.fire({
-        icon : 'success',
-        title : 'WellDone!!',
-        text : 'Loggedin Successfully!!'
+        icon: "success",
+        title: "WellDone!!",
+        text: "Loggedin Successfully!!",
       })
-    }else if(res.status === 401){
+      navigate('/track');
+    } else if (res.status === 401) {
       Swal.fire({
-        icon : 'error',
-        title : 'OOops!!',
-        text : 'Loggin Failed!!'
+        icon: "error",
+        title: "OOops!!",
+        text: "Loggin Failed!!",
       })
-    }else{
+    } else {
       Swal.fire({
-        icon : 'error',
-        title : 'OOops!!',
-        text : 'Some Error Occured!!'
+        icon: "error",
+        title: "OOops!!",
+        text: "Some Error Occured!!",
       })
     }
-
   }
 
   return (
@@ -45,7 +48,8 @@ const Login = () => {
             <Formik initialValues={{ email: "", password: "" }} onSubmit={userSubmit}>
               {({ values, handleSubmit, handleChange }) => (
                 <form onSubmit={handleSubmit}>
-                  <TextField fullWidth value={values.email} onChange={handleChange} name="email" label="Email Address" />
+                  <label></label>
+                  <input className="form-control mb-3" value={values.email} onChange={handleChange} name="email" />
 
                   <label>Password</label>
                   <input className="form-control mb-3" type="password" value={values.password} onChange={handleChange} name="password" />
