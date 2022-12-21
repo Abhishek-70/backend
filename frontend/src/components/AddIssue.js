@@ -34,7 +34,7 @@ const AddIssue = () => {
   }
   return (
     <div className="container">
-      <h3 className="my-3 text-center">Register User</h3>
+      <h3 className="my-3 text-center">Register Issue</h3>
 
       <Formik initialValues={{ title: "", type: "", assignedBy: "", assignedTo: "", createdAt: new Date() }} onSubmit={userSubmit}>
         {({ values, handleChange, handleSubmit }) => (
@@ -58,7 +58,7 @@ const AddIssue = () => {
             <label>Assigned To</label>
             <input value={values.assignedTo} id="assignedTo" onChange={handleChange} className="form-control mb-3" />
 
-            <button type="submit" className="btn btn-primary mt-5">
+            <button type="submit" className="btn btn-danger mt-5">
               Submit
             </button>
           </form>

@@ -67,3 +67,9 @@
   color:yellow !important ;
   font-weight : bold;
 }
+
+body{
+  background-image: linear-gradient(orange,rgba(0, 0, 0, 0.785));
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}

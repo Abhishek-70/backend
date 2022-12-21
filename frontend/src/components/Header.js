@@ -6,12 +6,12 @@ const Header = () => {
     <div>
       <>
         {/* Navbar */}
-        <nav className="navbar navbar-expand-lg navbar-dark " style={{ backgroundColor: "#1d749f" }}>
+        <nav className="navbar navbar-expand-lg navbar-dark " style={{ backgroundColor: "black" }}>
           {/* Container wrapper */}
           <div className="container-fluid">
             {/* Navbar brand */}
             <a className="navbar-brand" href="#">
-              Brand
+              7pace~tracker
             </a>
             {/* Toggle button */}
             <button
@@ -53,7 +53,7 @@ const Header = () => {
               <ul className="navbar-nav d-flex flex-row me-1">
                 <li className="nav-item me-3 me-lg-0">
                   <a className="nav-link" href="#">
-                    <i className="fas fa-shopping-cart" />
+                  <i className="fab fa-facebook-f" />
                   </a>
                 </li>
                 <li className="nav-item me-3 me-lg-0">

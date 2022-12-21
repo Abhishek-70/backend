@@ -54,7 +54,7 @@ const Login = () => {
                   <label>Password</label>
                   <input className="form-control mb-3" type="password" value={values.password} onChange={handleChange} name="password" />
 
-                  <button type="submit" className="btn btn-primary">
+                  <button type="submit" className="btn btn-danger">
                     Submit
                   </button>
                 </form>

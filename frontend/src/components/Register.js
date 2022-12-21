@@ -52,26 +52,26 @@ const Register = () => {
     }
   return (
     <div className ='container'>
-      <h3 className='my-3 text-center'>Register User</h3>
+      <h3  id='tx' className='my-3 text-center'>Register User</h3>
 
       <Formik initialValues={{ name:'',email : '',password :'', age : 0}}
       onSubmit={userSubmit}>
         {({values, handleChange, handleSubmit})  => (
           <form onSubmit={handleSubmit}>
     
-          <label>Name</label>
+          <label >Name</label>
           <input value={values.name} id="name" onChange={handleChange} className='form-control mb-3' />
           
-          <label>Email</label>
+          <label >Email</label>
           <input value={values.email} id="email" onChange={handleChange} className= 'form-control mb-3 ' />
       
-          <label>Password</label>
+          <label >Password</label>
           <input value={values.password} id="password" onChange={handleChange} type = "password" className='form-control mb-3' />
       
-          <label>Age</label>
+          <label >Age</label>
           <input value={values.age} id="age" onChange={handleChange} type="number" className='form-control mb-3' />
           
-          <button type='submit' className='btn btn-primary mt-5'>Submit</button>
+          <button type='submit' className='btn btn-danger mt-5'>Submit</button>
       
           </form>
 
