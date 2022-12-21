@@ -34,7 +34,7 @@ const AddIssue = () => {
   }
   return (
     <div className="container">
-      <h3 className="my-3 text-center">Register Issue</h3>
+      <h3 className="my-3 text-center">Report Issue</h3>
 
       <Formik initialValues={{ title: "", type: "", assignedBy: "", assignedTo: "", createdAt: new Date() }} onSubmit={userSubmit}>
         {({ values, handleChange, handleSubmit }) => (
@@ -43,7 +43,7 @@ const AddIssue = () => {
             <input value={values.title} id="title" onChange={handleChange} className="form-control mb-3" />
 
             <label>Type</label>
-            <select value={values.email} id="email" onChange={handleChange} className="form-control mb-3 ">
+            <select value={values.email} id="type" onChange={handleChange} className="form-control mb-3 ">
               <option value="Error">Error</option>
               <option value="Bug">Bug</option>
               <option value="Duplicate">Duplicate</option>
